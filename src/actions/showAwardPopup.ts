@@ -12,7 +12,7 @@ export async function showAwardPopup(selectedPlayers: string[] | null = null, de
     const playerCheckboxes = pcs.map(pc => `
         <div class="form-group">
             <label style="display: flex; align-items: center; gap: 8px;">
-                <input type="checkbox" name="selectedPlayers" value="${pc.id}" ${selectedPlayers ? (selectedPlayers.includes(pc.id) ? 'checked' : '') : 'checked'} checked>
+                <input type="checkbox" name="selectedPlayers" value="${pc.id}" ${selectedPlayers ? (selectedPlayers.includes(pc.id) ? 'checked' : '') : 'checked'}>
                 <img src="${pc.img}" width="24" height="24" style="border:none">
                 ${pc.name}
             </label>
