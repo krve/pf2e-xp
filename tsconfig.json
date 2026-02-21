@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "types": ["fvtt-types", "vite/client"],
+    "target": "esnext",
+    "moduleResolution": "bundler",
+    "module": "esnext",
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*.d.ts", "src/**/*.ts"]
+}

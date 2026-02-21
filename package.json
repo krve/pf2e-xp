@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "devDependencies": {
+    "fvtt-types": "github:League-of-Foundry-Developers/foundry-vtt-types#main",
+    "rollup-plugin-copy": "^3.5.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite"
+  }
+}

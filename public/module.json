@@ -1,0 +1,28 @@
+{
+  "id": "pf2e-xp",
+  "title": "PF2E - XP",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "authors": [
+    {
+      "name": "krve"
+    }
+  ],
+  "flags": {
+    "canUpload": true
+  },
+  "description": "",
+  "esmodules": ["pf2e-xp.mjs"],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "manifest": "https://github.com/krve/pf2e-xp/releases/download/v1.0.0/module.json",
+  "download": "https://github.com/krve/pf2e-xp/releases/download/v1.0.0/pf2e-xp-v1.0.0.zip"
+}

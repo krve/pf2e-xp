@@ -1,0 +1,16 @@
+# IDE
+.vscode/**
+.idea/**
+.devcontainer
+
+# NPM
+node_modules/**
+
+# Build
+dist/**/*
+package/**
+debug.log
+.vite-cache
+
+# MacOS filesystem metadata
+.DS_Store
