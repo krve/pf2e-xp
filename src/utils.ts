@@ -16,3 +16,7 @@ export function unregisterAllFoundryHooks() {
     }
     registeredHookCallbacks.length = 0;
 }
+
+export function getPartyMembers() {
+    return game.actors.party.members.filter(m => m.type === "character" &&  !m.traits.has('eidolon') && !m.traits.has('minion'))
+}

@@ -1,12 +1,11 @@
-import {MODULE_NAME} from "../utils";
+import {getPartyMembers, MODULE_NAME} from "../utils";
 
 export async function showAwardPopup(selectedPlayers: string[] | null = null, description: string = '', amount: number = 0, locked = false) {
     if (!game.user.isGM) {
         return;
     }
 
-    // 1. Get all Player Characters
-    const pcs = game.actors.party.members.filter(m => m.type === "character" &&  !m.traits.has('eidolon') && !m.traits.has('minion'));
+    const pcs = getPartyMembers();
 
     // 2. Build the HTMLs
     const playerCheckboxes = pcs.map(pc => `

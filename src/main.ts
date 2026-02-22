@@ -2,7 +2,7 @@
 /*  Hooks                                       */
 /* -------------------------------------------- */
 
-import {MODULE_NAME, registerFoundryHook, unregisterAllFoundryHooks} from "./utils";
+import {getPartyMembers, MODULE_NAME, registerFoundryHook, unregisterAllFoundryHooks} from "./utils";
 import {showAwardPopup} from "./actions/showAwardPopup";
 
 /**
@@ -96,9 +96,11 @@ function register() {
             combat.combatants.filter(c => c.actor.alliance === 'opposition').map(c => c.actor.system.details.level.value),
             combat.combatants.filter(c => c.actor.type === "hazard").map(c => c.actor.system.details.level.value),
             {pwol}
-        )
+        );
 
-        showAwardPopup(pcs.map(actor => actor._id), `Encounter (${calulatedXP.rating.charAt(0).toUpperCase()}${calulatedXP.rating.slice(1)})`, calulatedXP.xpPerPlayer);
+        const xpToAward = calulatedXP.xpPerPlayer * (pcs.length / getPartyMembers().length);
+
+        showAwardPopup(pcs.map(actor => actor._id), `Encounter (${calulatedXP.rating.charAt(0).toUpperCase()}${calulatedXP.rating.slice(1)})`, xpToAward);
     });
 
     registerFoundryHook("init", () => {
