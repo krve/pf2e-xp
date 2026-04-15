@@ -1,5 +1,5 @@
 {
-  "version": "1.0.3",
+  "version": "1.0.4",
   "devDependencies": {
     "fvtt-types": "github:League-of-Foundry-Developers/foundry-vtt-types#main",
     "rollup-plugin-copy": "^3.5.0",
@@ -9,5 +9,8 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite"
+  },
+  "volta": {
+    "node": "24.14.1"
   }
 }

@@ -128,7 +128,8 @@ export async function showAwardPopup(selectedPlayers: string[] | null = null, de
         const messageData = {
             content: content,
             speaker: ChatMessage.getSpeaker(),
-            type: CONST.CHAT_MESSAGE_STYLES.OTHER,
+            // Removed for now. Not sure what it migrated to - possible because of PF2E module?
+            //type: CONST.CHAT_MESSAGE_STYLES.OTHER,
         }
 
         return ChatMessage.create(messageData);
